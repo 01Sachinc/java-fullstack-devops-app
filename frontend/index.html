@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Task Manager | Sachin C S</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="glass-bg"></div>
+    <div class="container">
+        <header>
+            <h1>DevOps Task Manager</h1>
+            <p class="subtitle">Full-Stack Enterprise Orchestration by Sachin C S</p>
+        </header>
+
+        <div class="main-grid">
+            <section class="add-task">
+                <div class="card">
+                    <h2>Add New Task</h2>
+                    <form id="task-form">
+                        <input type="text" id="title" placeholder="Task Title" required>
+                        <textarea id="description" placeholder="Task Description"></textarea>
+                        <select id="status">
+                            <option value="Pending">Pending</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Completed">Completed</option>
+                        </select>
+                        <button type="submit" class="primary-btn">Create Task</button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="task-list-section">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Active Tasks</h2>
+                        <button onclick="fetchTasks()" class="refresh-btn">↻ Refresh</button>
+                    </div>
+                    <div id="task-list" class="task-grid">
+                        <!-- Tasks will be injected here -->
+                        <div class="loader">Loading workspace...</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
