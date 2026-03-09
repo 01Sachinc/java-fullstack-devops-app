@@ -1,0 +1,5 @@
+com\devops\taskmanager\controller\TaskController.class
+com\devops\taskmanager\service\TaskService.class
+com\devops\taskmanager\repository\TaskRepository.class
+com\devops\taskmanager\model\Task.class
+com\devops\taskmanager\TaskManagerApplication.class

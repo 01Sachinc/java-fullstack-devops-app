@@ -5,6 +5,12 @@
 # Author: Sachin C S
 # -------------------------------------------------------------------
 
+# Check if Docker daemon is running
+if ! docker info > /dev/null 2>&1; then
+    echo "[ERROR] Docker daemon is not running. Please start Docker Desktop and try again."
+    exit 1
+fi
+
 echo "========================================"
 echo "[PIPELINE] STAGE: DEPLOYMENT (DOCKER COMPOSE)"
 echo "========================================"
