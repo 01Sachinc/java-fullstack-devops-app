@@ -3,12 +3,10 @@ pipeline {
 
     environment {
         // Docker Hub account
-        DOCKER_USER = "01sachinc"
-        IMAGE_NAME = "${DOCKER_USER}/taskmanager-frontend"
+        DOCKER_HUB_CREDS_USR = "01sachinc"
+        DOCKER_HUB_CREDS_PSW = "Qwaszx@2005"
+        IMAGE_NAME = "${DOCKER_HUB_CREDS_USR}/taskmanager-frontend"
         CONTAINER_NAME = "nginx-frontend-container"
-        
-        // This expects credentials named 'docker-hub-credentials' in Jenkins
-        DOCKER_HUB_CREDS = credentials('docker-hub-credentials') 
     }
 
     stages {
