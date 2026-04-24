@@ -2,6 +2,7 @@ pipeline {
     agent { label 'docker' }
 
     environment {
+        PATH = "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
         // Docker Hub account
         DOCKER_HUB_CREDS_USR = "01sachinc"
         DOCKER_HUB_CREDS_PSW = "Qwaszx@2005"
