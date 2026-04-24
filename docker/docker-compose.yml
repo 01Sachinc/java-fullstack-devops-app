@@ -5,7 +5,7 @@ services:
     image: mysql:8.0
     container_name: task-db
     environment:
-      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: taskdb
     ports:
       - "3306:3306"
@@ -24,15 +24,15 @@ services:
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/taskdb?useSSL=false&allowPublicKeyRetrieval=true
       SPRING_DATASOURCE_USERNAME: root
-      SPRING_DATASOURCE_PASSWORD: rootpassword
+      SPRING_DATASOURCE_PASSWORD: root
 
   frontend:
-    image: nginx:stable-alpine
+    build:
+      context: ../frontend
+      dockerfile: Dockerfile
     container_name: task-frontend
     ports:
       - "80:80"
-    volumes:
-      - ../frontend:/usr/share/nginx/html
 
 volumes:
   db-data:
