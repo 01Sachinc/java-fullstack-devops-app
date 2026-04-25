@@ -14,7 +14,7 @@ pipeline {
         stage('Pull Source Code') {
             steps {
                 echo 'Pulling source code from GitHub...'
-                git url: 'https://github.com/01Sachinc/java-fullstack-devops-app.git', branch: 'main'
+                git url: 'https://github.com/01Sachinc/java-fullstack-devops-app.git', branch: 'static-web-pipeline'
             }
         }
         
